@@ -47,7 +47,7 @@ suite('Functional Tests', () => {
                     });
             });
 
-            test('Convert 3/7.2/4kilogram (invalid number and unit)', done => {
+            test('Convert 3/7.2/4kilomegagram (invalid number and unit)', done => {
                 chai.request(server)
                     .get('/api/convert')
                     .query({ input: '3/7.2/4kilogram' })

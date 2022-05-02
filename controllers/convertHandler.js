@@ -59,7 +59,10 @@ function ConvertHandler() {
     };
 
     this.getReturnUnit = (initUnit) => {
-        let unit = initUnit.toLowerCase();
+        let unit;
+        if (initUnit != undefined) {
+            unit = initUnit.toLowerCase();
+        }
 
         switch (unit) {
             case "km":
@@ -80,7 +83,10 @@ function ConvertHandler() {
     };
 
     this.spellOutUnit = (initUnit) => {
-        let unit = initUnit.toLowerCase();
+        let unit;
+        if (initUnit != undefined) {
+            unit = initUnit.toLowerCase();
+        }
 
         switch (unit) {
             case "km":
@@ -101,7 +107,10 @@ function ConvertHandler() {
     };
 
     this.convert = (initNum, initUnit) => {
-        let unit = initUnit.toLowerCase();
+        let unit;
+        if (initUnit != undefined) {
+            unit = initUnit.toLowerCase();
+        }
         const galToL = 3.78541;
         const lbsToKg = 0.453592;
         const miToKm = 1.60934;
@@ -129,8 +138,11 @@ function ConvertHandler() {
             default:
                 result = undefined
         }
-
-        return parseFloat(result.toFixed(5));
+        if (result != undefined) {
+            return parseFloat(result.toFixed(5));
+        } else {
+            return undefined;
+        }
     };
 
     this.getString = (initNum, initUnit, returnNum, returnUnit) => {

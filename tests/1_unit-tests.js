@@ -92,7 +92,7 @@ suite('Unit Tests', () => {
 
     suite('Function convertHandler.convert(num, unit)', () => {
 
-        test('gal to L', done => {
+        test('Gal to L', done => {
             let input = [5, 'gal'];
             let expected = 18.9271;
             assert.approximately(convertHandler.convert(input[0], input[1]), expected, 0.1);
